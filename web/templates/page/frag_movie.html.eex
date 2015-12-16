@@ -1,0 +1,10 @@
+<div class="movie">
+  <div class="logo">
+  <img src="<%= @poster %>" alt="django">
+  </div>
+  <div class="name"><%= @name %></div>
+  <div class="details">
+    <span class="cinema"><%= Timex.Date.from(@cinema) |> Timex.DateFormat.format("{D}. {M}. {YYYY}") |> elem(1) %></span>
+    <span class="dvd"><%= Timex.Date.from(@dvd) |> Timex.DateFormat.format("{D}. {M}. {YYYY}") |> elem(1) %></span>
+  </div>
+</div>

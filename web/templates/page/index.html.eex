@@ -1,0 +1,66 @@
+<%= render "frag_movie.html",
+                            poster: static_path(@conn, "/images/django.jpg"),
+                            name: "Nespoutany django",
+                            cinema: {2013, 5, 20},
+                            dvd: {2013, 12, 1}
+%>
+
+<%= render "frag_movie.html",
+                            poster: static_path(@conn, "/images/django.jpg"),
+                            name: "Nespoutany django",
+                            cinema: {2013, 5, 20},
+                            dvd: {2013, 12, 1}
+%>
+
+<%= render "frag_movie.html",
+                            poster: static_path(@conn, "/images/django.jpg"),
+                            name: "Nespoutany django",
+                            cinema: {2013, 5, 20},
+                            dvd: {2013, 12, 1}
+%>
+
+<%= render "frag_movie.html",
+                            poster: static_path(@conn, "/images/django.jpg"),
+                            name: "Nespoutany django",
+                            cinema: {2013, 5, 20},
+                            dvd: {2013, 12, 1}
+%>
+
+<%= render "frag_movie.html",
+                            poster: static_path(@conn, "/images/django.jpg"),
+                            name: "Nespoutany django",
+                            cinema: {2013, 5, 20},
+                            dvd: {2013, 12, 1}
+                            %>
+
+<%= render "frag_movie.html",
+                            poster: static_path(@conn, "/images/django.jpg"),
+                            name: "Nespoutany django",
+                            cinema: {2013, 5, 20},
+                            dvd: {2013, 12, 1}
+%>
+
+<%= render "frag_movie.html",
+                            poster: static_path(@conn, "/images/django.jpg"),
+                            name: "Nespoutany django",
+                            cinema: {2013, 5, 20},
+                            dvd: {2013, 12, 1}
+%>
+<%= render "frag_movie.html",
+                            poster: static_path(@conn, "/images/django.jpg"),
+                            name: "Nespoutany django",
+                            cinema: {2013, 5, 20},
+                            dvd: {2013, 12, 1}
+%>
+<%= render "frag_movie.html",
+                            poster: static_path(@conn, "/images/django.jpg"),
+                            name: "Nespoutany django",
+                            cinema: {2013, 5, 20},
+                            dvd: {2013, 12, 1}
+%>
+<%= render "frag_movie.html",
+                            poster: static_path(@conn, "/images/django.jpg"),
+                            name: "Nespoutany django",
+                            cinema: {2013, 5, 20},
+                            dvd: {2013, 12, 1}
+%>
