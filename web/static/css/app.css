@@ -38,6 +38,81 @@ body {
   background: #fafafa;
 }
 
+.hints {
+    border: 1px solid #dedede;
+    border-top: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.hints a {
+    color: #00455C;
+}
+
+.hints a:hover {
+    color: #666;
+}
+
+.hints a:hover .hint-item {
+    background: #DBF6FF;
+}
+
+.hints .hint-item {
+    border-top: 1px solid #dedede;
+    height: 50px;
+    width: 800px;
+    background: white;
+}
+
+.hints .hint-item.item-secondary {
+    height: 30px;
+}
+
+.hints .hint-item .poster {
+    margin: 9px 5px 0 9px;
+}
+
+.hints .hint-item.item-secondary .poster {
+    margin: 6px 22px;
+    margin-bottom: 0;
+}
+
+.hints .hint-item .poster img {
+    width: auto;
+    height: 32px;
+    border: 1px solid #ccc;
+}
+
+.hints .hint-item .poster {
+    float: left;
+}
+
+.hints .hint-item .name {
+    float: left;
+    line-height: 50px;
+    vertical-align: middle;
+    padding-left: 5px;
+    
+}
+
+.hint-loading {
+    text-align: center;
+
+}
+
+.hint-loading img {
+    margin-top: 17px;
+}
+
+.hints .hint-item.item-secondary .name {
+    padding-left: 3px;
+}
+
+.hints .hint-item.item-secondary .name {
+    line-height: 30px;
+    font-size: 12px;
+}
+
 .search .center {
   border: 1px solid #dedede;
   border-top: 0;

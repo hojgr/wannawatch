@@ -23,7 +23,16 @@
       <div class="search">
         <div class="center">
             <input type="text" name="search" placeholder="Hledat...">
-        </div>
+	    <div class="hints">
+	      <div id="search-load" class="hint-item hint-loading" style="display: none">
+		<img src="<%= static_path(@conn, "/images/ajax_loader.gif") %>" />
+	      </div>
+	      
+	      <div id="search-loaded"></div>
+	      
+	      <div style="clear: both"></div>
+	    </div>
+	</div>
       </div>
       <div class="content">
         <div class="center">
