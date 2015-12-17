@@ -22,12 +22,24 @@ selector.focusin(function() {
 $('html').click(function(e) {
     if(visible) {
 	if ($(e.target).closest('.search .center').length === 0) {
-	    visible = false;
-            console.log("Hiding it");
-	    $(".hints").hide();
+	    hideHints();
 	}
     }
 });
+
+$(document).keyup(function(e) {
+    if (e.keyCode == 27) {
+	if(visible) {
+	    hideHints();
+	}
+    }
+});
+
+function hideHints() {
+    visible = false;
+    console.log("Hiding it");
+    $(".hints").hide();
+}
 
 function searchWork(val) {
     if(!visible) {
