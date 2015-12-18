@@ -23,6 +23,8 @@ defmodule Wannawatch.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+		get "/login", AccountController, :login
+		post "/login", AccountController, :login_post
   end
 
   # Other scopes may use custom stacks.

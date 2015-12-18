@@ -1,0 +1,12 @@
+<div class="login">
+  <form action="<%= account_path(@conn, :login_post) %>" method="POST">
+    <label for="username">Uzivatelske jmeno</label><br />
+    <input type="text" name="username" placeholder="..." /><br />
+
+    <label for="username">Heslo</label><br />
+    <input type="password" name="password" placeholder="..." /><br />
+
+    <input type="submit" value="Prihlasit se" class="login-btn" />
+    <input type="hidden" name="_csrf_token" value="<%= get_csrf_token() %>">
+  </form>
+</div>
