@@ -23,11 +23,11 @@
 }
 
 .form input[type="submit"] {
-    width: 100px;
+    width: 140px;
     background: white;
     border: 1px solid #aaa;
 
-    margin-left: 43px;
+    margin-left: 33px;
 }
 
 .form-btn:hover, .login-btn:focus {

@@ -1,0 +1,15 @@
+<div class="form">
+  <form action="<%= account_path(@conn, :register_post) %>" method="POST">
+    <label for="username">Uzivatelske jmeno</label><br />
+    <input type="text" name="username" placeholder="..." /><br />
+
+    <label for="username">Heslo</label><br />
+    <input type="password" name="password" placeholder="..." /><br />
+
+    <label for="email">E-mail</label><br />
+    <input type="email" name="email" placeholder="..." /><br />
+
+    <input type="submit" value="Zaregistrovat se" class="form-btn" />
+    <input type="hidden" name="_csrf_token" value="<%= get_csrf_token() %>">
+  </form>
+</div>
