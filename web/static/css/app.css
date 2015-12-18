@@ -34,6 +34,10 @@ body {
 
 }
 
+.header a:hover, .header a:visited {
+    color: black;
+}
+
 .search {
   background: #fafafa;
 }

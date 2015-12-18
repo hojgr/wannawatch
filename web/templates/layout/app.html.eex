@@ -13,13 +13,16 @@
 
   <body>
     <div class="container">
+      
       <div class="header">
-
-        <div class="center">
-          <div class="logo"></div>
-          <div class="text">WannaWatch</div>
-        </div>
+	<a href="<%= page_path @conn, :index %>">	  
+          <div class="center">
+            <div class="logo"></div>
+            <div class="text">WannaWatch</div>
+          </div>
+	</a>
       </div>
+      
       <div class="search">
         <div class="center">
             <input type="text" name="search" placeholder="Hledat...">
