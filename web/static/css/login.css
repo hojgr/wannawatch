@@ -1,28 +1,28 @@
-.login {
+.form {
     width: 200px;
     margin: 50px auto;
 }
 
-.login label {
+.form label {
     font-size: 16px;
     color: #444;
     font-weight: bold;
 }
 
-.login input {
+.form input {
     padding: 5px;
     width: 186px;
     border: 1px solid #aaa;
     margin-bottom: 20px;
 }
 
-.login input:focus {
+.form input:focus {
     outline: none;
     border-color: black;
     border-width: 1px;
 }
 
-.login input[type="submit"] {
+.form input[type="submit"] {
     width: 100px;
     background: white;
     border: 1px solid #aaa;
@@ -30,7 +30,7 @@
     margin-left: 43px;
 }
 
-.login-btn:hover, .login-btn:focus {
+.form-btn:hover, .login-btn:focus {
     border-color: black !important;
     background: #eee !important;
 }
