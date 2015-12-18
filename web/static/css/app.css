@@ -38,8 +38,12 @@ body {
   background: #fafafa;
 }
 
+.search input:focus {
+    background: #eee;
+}
+
 .hints {
-    border: 1px solid #dedede;
+    border: 1px solid #eee;
     border-top: 0;
     position: absolute;
     z-index: 1;
@@ -58,7 +62,7 @@ body {
 }
 
 .hints .hint-item {
-    border-top: 1px solid #dedede;
+    border-top: 1px solid #eee;
     height: 50px;
     width: 800px;
     background: white;
@@ -114,7 +118,7 @@ body {
 }
 
 .search .center {
-  border: 1px solid #dedede;
+  border: 1px solid #eee;
   border-top: 0;
   border-bottom: 0;
   height: 50px;
