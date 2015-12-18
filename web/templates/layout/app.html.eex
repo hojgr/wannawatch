@@ -35,7 +35,9 @@
 	</div>
       </div>
 
-      <%= flashes @conn %>
+      <%= for type <- [:success, :error, :info], msg = get_flash(@conn, type) do %>
+	  <%= content_tag :div, msg, class: (to_string(type) <> " message") %>
+      <%= end %>
       
       <div class="content">
         <div class="center">
