@@ -121,14 +121,14 @@ body {
   border: 1px solid #eee;
   border-top: 0;
   border-bottom: 0;
-  height: 50px;
+  height: 49px;
   background: white;
 }
 
 .search input {
   border: 0;
   padding: 0;
-  height: 50px;
+  height: 49px;
   width: 760px;
   font-size: 35px;
   padding: 0 20px;

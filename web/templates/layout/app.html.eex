@@ -34,15 +34,16 @@
 	    </div>
 	</div>
       </div>
+
+      <%= flashes @conn %>
+      
       <div class="content">
         <div class="center">
           <%= @inner %>
         </div>
       </div>
     </div>
-    <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-    <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
 
-    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+    <script src='<%= static_path(@conn, "/js/app.js") %>'></script>
   </body>
 </html>

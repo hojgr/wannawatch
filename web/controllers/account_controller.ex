@@ -14,6 +14,6 @@ defmodule Wannawatch.AccountController do
 	end
 	
 	def register_post(conn, params) do
-		json conn, params
+		conn |> put_flash(:success, "Uspesne zaregistrovan!") |> redirect(to: page_path(conn, :index))
 	end
 end
