@@ -4,6 +4,10 @@ let last_search = "";
 let visible = false;
 let beginSearchTimeout;
 
+$(this).ready(function() {
+    selector.focus();
+});
+
 selector.keypress(function() {
     setTimeout(() => {
 	let v = $(this).val();
