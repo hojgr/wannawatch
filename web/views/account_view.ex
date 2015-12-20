@@ -1,4 +1,4 @@
 defmodule Wannawatch.AccountView do
-	use Wannawatch.Web, :view
+  use Wannawatch.Web, :view
 
 end

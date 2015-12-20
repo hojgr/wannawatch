@@ -1,6 +1,6 @@
 defmodule Wannawatch.CSFD do
-	def search(query) do
-		%{body: html} = HTTPoison.get!("http://www.csfd.cz/hledat/?" <> URI.encode_query(%{q: query}))
+  def search(query) do
+    %{body: html} = HTTPoison.get!("http://www.csfd.cz/hledat/?" <> URI.encode_query(%{q: query}))
     # REGEX EXPLAIN
     #<li>\s* - start matching at <li>
     # <a href="(/film/[^"]*)"> - extract CSFD movie URL
@@ -11,7 +11,7 @@ defmodule Wannawatch.CSFD do
     #   r - ungreedy (swap greedyness) -> no need for questionmarks
     #   s - dotall (dot includes all whitespaces incl. newlines)
     # TODO: Make this regexp more human-readable and less error-prone
-		
+    
     regex = ~R{<li>\s*<a href="(/film/[^"]*)"><img src="(.*)".*film c.">(.*)</a>.*([0-9]+)</p>}rs
     other_records_regex = ~R{<a href="(/film/.*)" class="film c.">(.*)</a>.*\(([0-9]+)\)}r
 
@@ -22,6 +22,6 @@ defmodule Wannawatch.CSFD do
     |> Enum.map(fn [url, name, year] -> %{url: url, name: name, year: year} end)
 
     %{primary: result, secondary: other_result}
-		
-	end
+    
+  end
 end
