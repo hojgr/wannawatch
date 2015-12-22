@@ -13,7 +13,10 @@
 
   <body>
     <div class="container">
-      
+      <div class="navi">
+        <%= link "Prihlasit se", to: account_path(@conn, :login), class: :item %>
+        <%= link "Zaregistrovat se", to: account_path(@conn, :register), class: :item %>
+      </div>
       <div class="header">
 	<a href="<%= page_path @conn, :index %>">	  
           <div class="center">
@@ -22,7 +25,6 @@
           </div>
 	</a>
       </div>
-      
       <div class="search">
         <div class="center">
             <input type="text" name="search" placeholder="Hledat...">

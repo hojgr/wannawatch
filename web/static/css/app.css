@@ -2,6 +2,26 @@ body {
   background: #addefc;
 }
 
+.navi {
+    height: 30px;
+    background: white;
+    text-align: center;
+}
+
+.navi a.item {
+    text-decoration: none;
+    margin-top: 50px;
+    padding: 5px;
+    position: relative;
+    top: 5px;
+    color: black;
+}
+
+.navi a.item:hover {
+    text-decoration: underline;
+    color: #666;
+}
+
 .header {
   height: 150px;
   background: #87cefa;
