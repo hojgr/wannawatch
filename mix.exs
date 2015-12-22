@@ -6,7 +6,7 @@ defmodule Wannawatch.Mixfile do
      version: "0.0.1",
      elixir: "~> 1.0",
      elixirc_paths: elixirc_paths(Mix.env),
-     compilers: [:phoenix] ++ Mix.compilers,
+     compilers: [:phoenix, :gettext] ++ Mix.compilers,
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      aliases: aliases,
@@ -19,7 +19,7 @@ defmodule Wannawatch.Mixfile do
   def application do
     [mod: {Wannawatch, []},
      applications: [:phoenix, :phoenix_html, :cowboy, :logger,
-                    :phoenix_ecto, :postgrex, :httpoison]] # , :tzdata
+                    :phoenix_ecto, :postgrex, :httpoison, :gettext, :tzdata]]
   end
 
   # Specifies which paths to compile per environment.
@@ -30,14 +30,15 @@ defmodule Wannawatch.Mixfile do
   #
   # Type `mix help deps` for examples and options.
   defp deps do
-    [{:phoenix, "~> 1.0.4"},
-     {:phoenix_ecto, "~> 1.2"},
+    [{:phoenix, "~> 1.1"},
+     {:phoenix_ecto, "~> 2.0"},
      {:postgrex, ">= 0.0.0"},
-     {:phoenix_html, "~> 2.1"},
+     {:phoenix_html, "~> 2.3"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:cowboy, "~> 1.0"},
      {:timex, "~> 1.0.0-rc4"},
-     {:httpoison, "~> 0.8.0"}]
+     {:httpoison, "~> 0.8.0"},
+     {:gettext, "~> 0.9"}]
    end
 
   # Aliases are shortcut or tasks specific to the current project.

@@ -44,7 +44,7 @@
       
       <div class="content">
         <div class="center">
-          <%= @inner %>
+          <%= render @view_module, @view_template, assigns %>
         </div>
       </div>
     </div>

@@ -18,8 +18,9 @@ defmodule Wannawatch.Web do
 
   def model do
     quote do
-      use Ecto.Model
+      use Ecto.Schema
 
+      import Ecto
       import Ecto.Changeset
       import Ecto.Query, only: [from: 1, from: 2]
     end
@@ -48,6 +49,8 @@ defmodule Wannawatch.Web do
       use Phoenix.HTML
 
       import Wannawatch.Router.Helpers
+      import Wannawatch.Gettext
+      import Wannawatch.ErrorHelpers
     end
   end
 
@@ -62,6 +65,7 @@ defmodule Wannawatch.Web do
       use Phoenix.Channel
 
       alias Wannawatch.Repo
+      import Ecto
       import Ecto.Model
       import Ecto.Query, only: [from: 1, from: 2]
     end

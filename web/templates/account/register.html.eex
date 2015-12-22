@@ -1,15 +1,30 @@
 <div class="form">
-  <form action="<%= account_path(@conn, :register_post) %>" method="POST">
-    <label for="username">Uzivatelske jmeno</label><br />
-    <input type="text" name="username" placeholder="..." /><br />
+  <%= form_for @changeset, account_path(@conn, :register_post), fn f -> %>
+    <%= if errors = get_flash(@conn, :form_errors) do %>
+    <ul style="width: 600px; position: relative; left: -50px;">
+      <%= for {attr, message} <- errors do %>
+          <li>
+            <%= humanize attr %>: <%= translate_error message  %>
+          </li>
+          <%= end %>
+    </ul>
+    <%= end %>
 
-    <label for="username">Heslo</label><br />
-    <input type="password" name="password" placeholder="..." /><br />
+    <label>
+      Uzivatelske jmeno
+      <%= text_input f, :username %>
+    </label>
 
-    <label for="email">E-mail</label><br />
-    <input type="email" name="email" placeholder="..." /><br />
+    <label>
+      Heslo
+      <%= password_input f, :password %>
+    </label>
 
-    <input type="submit" value="Zaregistrovat se" class="form-btn" />
-    <input type="hidden" name="_csrf_token" value="<%= get_csrf_token() %>">
-  </form>
+    <label>
+      E-mail
+      <%= email_input f, :email %>
+    </label>
+
+    <%= submit "Zaregistrovat se " %>
+    <%= end %>
 </div>

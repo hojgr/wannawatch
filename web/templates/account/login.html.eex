@@ -1,12 +1,15 @@
 <div class="form">
-  <form action="<%= account_path(@conn, :login_post) %>" method="POST">
-    <label for="username">Uzivatelske jmeno</label><br />
-    <input type="text" id="username" name="username" placeholder="..." /><br />
+  <%= form_for @changeset, account_path(@conn, :login_post), fn f -> %>
+  <label>
+    Uzivatelske jmeno
+    <%= text_input f, :username %>
+  </label>
 
-    <label for="password">Heslo</label><br />
-    <input type="password" id="password" name="password" placeholder="..." /><br />
-
-    <input type="submit" value="Prihlasit se" class="form-btn" />
-    <input type="hidden" name="_csrf_token" value="<%= get_csrf_token() %>">
-  </form>
+  <label>
+    Heslo
+    <%= password_input f, :password %>
+  </label>
+     
+  <%= submit "Prihlasit se" %>
+  <%= end %>
 </div>
