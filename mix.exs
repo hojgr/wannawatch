@@ -19,7 +19,8 @@ defmodule Wannawatch.Mixfile do
   def application do
     [mod: {Wannawatch, []},
      applications: [:phoenix, :phoenix_html, :cowboy, :logger,
-                    :phoenix_ecto, :postgrex, :httpoison, :gettext, :tzdata]]
+                    :phoenix_ecto, :postgrex, :httpoison, :gettext, :tzdata,
+                    :comeonin]]
   end
 
   # Specifies which paths to compile per environment.
@@ -38,7 +39,8 @@ defmodule Wannawatch.Mixfile do
      {:cowboy, "~> 1.0"},
      {:timex, "~> 1.0.0-rc4"},
      {:httpoison, "~> 0.8.0"},
-     {:gettext, "~> 0.9"}]
+     {:gettext, "~> 0.9"},
+     {:comeonin, "~> 2.0"}]
    end
 
   # Aliases are shortcut or tasks specific to the current project.

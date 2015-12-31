@@ -1,8 +1,8 @@
 defmodule Wannawatch.AccountController do
+  alias Wannawatch.User
   use Wannawatch.Web, :controller
 
   def login(conn, _params) do
-    alias Wannawatch.User
     changeset = case get_flash(conn, :login_changeset) do
                   nil -> User.changeset(%User{})
                   changeset -> changeset
@@ -16,8 +16,6 @@ defmodule Wannawatch.AccountController do
   end
 
   def register(conn, _params) do
-    alias Wannawatch.User
-
     changeset = case get_flash(conn, :original_changeset) do
                   changeset when changeset != nil ->
                     changeset
@@ -29,25 +27,21 @@ defmodule Wannawatch.AccountController do
   end
   
   def register_post(conn, %{"user" => user}) do
-    alias Wannawatch.User
-    changeset = User.changeset(%User{}, user)
+    changeset = User.registration_changeset(%User{}, user)
 
-    censored_changeset = %{changeset.params | "password" => ""}
-
-    IO.inspect censored_changeset
-    
-    conn = case changeset.valid? do
-             true ->
-               conn
-               |> put_flash(:success, "Uspesne zaregistrovan!")
-               |> redirect(to: page_path(conn, :index))
-             false ->
-               conn
-               |> put_flash(:form_errors, changeset.errors)
-               |> put_flash(:error, "Registrace nebyla uspesna")
-               |> put_flash(:original_changeset, changeset)
-               |> redirect(to: account_path(conn, :register))
-           end
-
+    case Repo.insert(changeset) do
+      {:ok, user} ->
+        conn
+        |> put_flash(:success, "Uspesne zaregistrovan!")
+        |> redirect(to: page_path(conn, :index))
+      {:error, changeset} ->
+        censored_changeset = Map.put(changeset, :params, %{changeset.params | "password" => ""})
+        
+        conn
+        |> put_flash(:form_errors, changeset.errors)
+        |> put_flash(:error, "Registrace nebyla uspesna")
+        |> put_flash(:original_changeset, censored_changeset)
+        |> redirect(to: account_path(conn, :register))
+    end
   end
 end
