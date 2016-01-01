@@ -4,7 +4,7 @@
     <ul style="width: 600px; position: relative; left: -50px;">
       <%= for {attr, message} <- errors do %>
           <li>
-            <%= humanize attr %>: <%= translate_error message  %>
+            <%= humanize attr %> <%= translate_error message  %>
           </li>
           <%= end %>
     </ul>
@@ -25,6 +25,6 @@
       <%= email_input f, :email %>
     </label>
 
-    <%= submit "Zaregistrovat se " %>
+    <%= submit "Zaregistrovat se" %>
     <%= end %>
 </div>
