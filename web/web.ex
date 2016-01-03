@@ -51,6 +51,7 @@ defmodule Wannawatch.Web do
       import Wannawatch.Router.Helpers
       import Wannawatch.Gettext
       import Wannawatch.ErrorHelpers
+      import Wannawatch.Session, only: [current_user: 1, logged_in?: 1]
     end
   end
 

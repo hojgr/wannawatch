@@ -28,6 +28,8 @@ defmodule Wannawatch.Router do
 
     get "/register", AccountController, :register
     post "/register", AccountController, :register_post
+
+    get "/logout", AccountController, :logout
   end
 
   # Other scopes may use custom stacks.

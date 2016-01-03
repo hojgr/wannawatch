@@ -3,17 +3,16 @@ body {
 }
 
 .navi {
-    height: 30px;
+    height: 25px;
     background: white;
     text-align: center;
+    padding-top: 5px;
 }
 
 .navi a.item {
     text-decoration: none;
     margin-top: 50px;
-    padding: 5px;
     position: relative;
-    top: 5px;
     color: black;
 }
 

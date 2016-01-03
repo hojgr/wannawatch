@@ -14,8 +14,15 @@
   <body>
     <div class="container">
       <div class="navi">
+        <%= if logged_in?(@conn) do %>
+        <%= current_user(@conn).username %>
+        |
+        <%= link "Odhlasit se", to: account_path(@conn, :logout), class: :item %>
+        <%= else %>
         <%= link "Prihlasit se", to: account_path(@conn, :login), class: :item %>
+        |
         <%= link "Zaregistrovat se", to: account_path(@conn, :register), class: :item %>
+        <%= end %>
       </div>
       <div class="header">
 	<a href="<%= page_path @conn, :index %>">	  
